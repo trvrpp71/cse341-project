@@ -1,9 +1,12 @@
-<%- include('includes/head.ejs') %>
+<!DOCTYPE html>
+<html>
 
-<!-- inlude additional style sheets here -->
+<head>
+  <% include ../../../includes/header.ejs %>
 </head>
+
 <body>
-    <%- include('includes/nav.ejs') %>
+  <% include ../../../includes/nav.ejs %>
     <main>
         <h1 class="main-title">My Book List</h1>
 
@@ -17,7 +20,7 @@
             <h1>there are no books in the list</h1>
         <% } %>
         
-        <a href="./pr02a">Add a book to the list</a>
-        
+        <a href="./pr02Add">Add a book</a>
 
-<%- include('includes/end.ejs') %>
+
+<%- include('../../../includes/end.ejs') %>

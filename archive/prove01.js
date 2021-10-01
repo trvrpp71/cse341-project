@@ -1,6 +1,6 @@
 const http = require('http');
 
-const routes = require('./prove01-routes');
+const routes = require('../routes/proveRoutes/PR01/pr01');
 
 const port = process.env.port || 3000;
 

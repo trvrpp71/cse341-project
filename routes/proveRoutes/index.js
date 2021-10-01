@@ -1,11 +1,17 @@
-const proveRoutes = require('express').Router();
+const express = require('express');
+const proveRoutes = express.Router();
 
-proveRoutes
-    .use('/01', require('./pr01'))
-    .use('/02', require('./pr02'))
-    .use('/03', require('./pr03'))
-    .use('/04', require('./pr04'))
-    .get('/', (req, res, next) => {
+const app = express();
+
+const pr02Route = require('./PR02/pr02');
+const pr02aRoute = require('./PR02/pr02a');
+app.use('/pr02', pr02Route);
+app.use('/pr02a', pr02aRoute);
+
+
+proveRoutes.use('/01', require('./PR01/test01'));
+proveRoutes.use('/02', require('./PR02/pr02'));
+proveRoutes.get('/', (req, res, next) => {
         res.render('./pages/proveActivities', {
           title: 'Prove Activities',
           path: '/proveActivities'
